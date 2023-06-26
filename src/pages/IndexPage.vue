@@ -2,7 +2,9 @@
   <q-page class="home">
     <img alt="Quasar logo" src="../assets/imgs/noix2.jpg" class="imagem-home" />
     <q-footer class="footer">
-      O valor do cartão tá em: {{ total.toFixed(2) }}
+      Total: R${{ total.toFixed(2) }}
+      <q-space />
+      Uso: {{ totalUso }} vezes
     </q-footer>
   </q-page>
 </template>
@@ -21,6 +23,7 @@ export default defineComponent({
       valorTotalRapha: 0,
       valorTotalAmbos: 0,
       total: 0,
+      totalUso: 0,
     };
   },
   mixins: [MixinApp],
@@ -33,6 +36,10 @@ export default defineComponent({
     this.valorTotalRapha = await this.getTotalRapha();
     this.total =
       this.valorTotalRapha + this.valorTotalRhai + this.valorTotalAmbos;
+    this.totalUso =
+      this.cartaoAmbos.length +
+      this.cartaoRapha.length +
+      this.cartaoRhai.length;
   },
 });
 </script>
@@ -56,6 +63,7 @@ export default defineComponent({
 
 .footer {
   text-align: center;
-  background-color: blueviolet;
+  background-color: rgb(98, 192, 247);
+  color: black;
 }
 </style>

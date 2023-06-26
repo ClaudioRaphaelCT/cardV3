@@ -25,7 +25,11 @@
         </q-item>
       </q-list>
     </div>
-    <q-footer class="footer"> Total Ambos: {{ vlrAmbos.toFixed(2) }}</q-footer>
+    <q-footer class="footer">
+      Total Ambos: {{ vlrAmbos.toFixed(2) }}
+      <q-space />
+      Uso: {{ totalUso }} vezes
+    </q-footer>
   </div>
 </template>
 <script>
@@ -35,12 +39,14 @@ export default {
     return {
       cartaoAmbos: [],
       vlrAmbos: 0,
+      totalUso: 0,
     };
   },
   mixins: [MixinAmbos],
   async created() {
     this.cartaoAmbos = await this.getDataAmbos();
     this.vlrAmbos = await this.getTotalAmbos();
+    this.totalUso = await this.cartaoAmbos.length;
   },
 };
 </script>

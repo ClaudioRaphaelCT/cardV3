@@ -5,7 +5,7 @@
       <!-- Input Responsavel -->
       <q-select
         outlined
-        color="purple-12"
+        color="teal-14"
         v-model="newItem.name"
         :options="responsaveis"
         label="Responsavel"
@@ -13,11 +13,11 @@
       />
       <!-- Input Data -->
       <q-input
-        color="purple-12"
+        color="teal-14"
         v-model="newItem.data"
         label="Data"
         class="inptData"
-        mask="##/##/####"
+        mask.date="##/##/####"
       >
         <template v-slot:prepend>
           <q-icon name="event" />
@@ -25,7 +25,7 @@
       </q-input>
       <!-- Input Local -->
       <q-input
-        color="purple-12"
+        color="teal-14"
         v-model="newItem.local"
         label="Localidade"
         class="inptData"
@@ -37,7 +37,7 @@
       <!-- Input Valor -->
       <q-input
         type="number"
-        color="purple-12"
+        color="teal-14"
         v-model.number="newItem.valor"
         label="Valor"
         class="inptData"
@@ -47,7 +47,7 @@
         </template>
       </q-input>
       <!-- Button Cadastrar -->
-      <q-btn color="purple" label="Cadastrar" class="btnAdd" @click="addItem" />
+      <q-btn color="blue-9" label="Cadastrar" class="btnAdd" @click="addItem" />
     </div>
   </div>
 </template>

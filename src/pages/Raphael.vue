@@ -26,8 +26,10 @@
       </q-list>
     </div>
     <q-footer class="text-center">
-      Total Raphael: {{ vlrCalculateRapha.toFixed(2) }}</q-footer
-    >
+      Total Raphael: {{ vlrCalculateRapha.toFixed(2) }}
+      <q-space />
+      Uso: {{ totalUso }} vezes
+    </q-footer>
   </div>
 </template>
 <script>
@@ -40,6 +42,7 @@ export default {
       vlrTotal: 0,
       vlrAmbos: 0,
       vlrCalculateRapha: 0,
+      totalUso: 0,
     };
   },
   mixins: [MixinRapha],
@@ -49,7 +52,8 @@ export default {
     this.cartaoAmbos = await this.getDataAmbos();
     this.vlrTotal = await this.getTotal();
     this.vlrAmbos = await this.getTotalAmbos();
-    this.vlrCalculateRapha = this.vlrTotal + this.vlrAmbos;
+    this.vlrCalculateRapha = (await this.vlrTotal) + this.vlrAmbos;
+    this.totalUso = await this.cartao.length;
   },
 };
 </script>
