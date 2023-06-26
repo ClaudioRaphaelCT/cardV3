@@ -62,7 +62,7 @@ export default {
 
 .item {
   margin-bottom: 3%;
-  background-color: rgb(167, 93, 4);
+  background-color: rgb(50, 148, 204);
   color: white;
 }
 .lista-title {
@@ -97,6 +97,6 @@ export default {
 
 .footer {
   text-align: center;
-  background-color: black;
+  background-color: rgb(50, 148, 204);
 }
 </style>

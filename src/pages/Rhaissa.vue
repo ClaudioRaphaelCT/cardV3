@@ -68,7 +68,7 @@ export default {
 
 .item {
   margin-bottom: 3%;
-  background-color: DarkOrchid;
+  background-color: rgb(50, 148, 204);
   color: white;
 }
 .lista-title {
@@ -103,6 +103,6 @@ export default {
 
 .footer {
   text-align: center;
-  background-color: purple;
+  background-color: rgb(50, 148, 204);
 }
 </style>

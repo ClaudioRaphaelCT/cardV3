@@ -25,7 +25,7 @@
         </q-item>
       </q-list>
     </div>
-    <q-footer class="text-center">
+    <q-footer class="footer">
       Total Raphael: {{ vlrCalculateRapha.toFixed(2) }}
       <q-space />
       Uso: {{ totalUso }} vezes
@@ -69,7 +69,7 @@ export default {
 
 .item {
   margin-bottom: 3%;
-  background-color: darkcyan;
+  background-color: rgb(50, 148, 204);
   color: white;
 }
 .lista-title {
@@ -100,5 +100,10 @@ export default {
 
 .valor {
   text-align: center;
+}
+
+.footer {
+  text-align: center;
+  background-color: rgb(50, 148, 204);
 }
 </style>
