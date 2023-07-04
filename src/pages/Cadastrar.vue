@@ -17,7 +17,7 @@
         v-model="newItem.data"
         label="Data"
         class="inptData"
-        mask.date="##/##/####"
+        mask="##/##/####"
       >
         <template v-slot:prepend>
           <q-icon name="event" />
