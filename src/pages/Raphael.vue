@@ -22,7 +22,11 @@
           <!-- DIALOG EDITAR -->
           <q-item-section avatar top>
             <q-avatar class="meu-avatar">
-              <img src="../assets/imgs/eu.jpg" alt="Avatar" />
+              <img
+                src="../assets/imgs/eu.jpg"
+                alt="Avatar"
+                class="avatar-imagem"
+              />
             </q-avatar>
           </q-item-section>
 
@@ -45,6 +49,7 @@
     />
     <!--BTN -->
     <Footer
+      :responsavel="nameRapha"
       :vlrTotal="vlrCalculateRapha.toFixed(2)"
       :totalUso="totalUso"
     ></Footer>
@@ -58,6 +63,7 @@ import { MixinRapha } from "src/utils/mixin-Raphael";
 export default {
   data() {
     return {
+      nameRapha: "Raphael",
       cartao: [],
       cartaoAmbos: [],
       vlrTotal: 0,
@@ -118,7 +124,7 @@ export default {
 }
 .item {
   margin-bottom: 3%;
-  background-color: rgb(50, 148, 204);
+  background-color: ForestGreen;
   color: white;
 }
 .itemSelecionado {
@@ -128,9 +134,13 @@ export default {
 }
 
 .meu-avatar {
-  margin-top: 10%;
-  height: 60px;
-  width: 60px;
+  height: 100px;
+  width: 100px;
+  border-radius: 0;
+}
+.avatar-imagem {
+  width: 100%;
+  height: 100%;
 }
 
 .local {

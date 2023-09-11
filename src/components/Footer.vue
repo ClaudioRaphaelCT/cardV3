@@ -1,18 +1,18 @@
 <template>
   <q-footer class="footer">
-    Total Raphael: {{ vlrTotal }}
+    Total {{ responsavel }}: {{ vlrTotal }}
     <q-space />
     Uso: {{ totalUso }} vezes
   </q-footer>
 </template>
 <script>
 export default {
-  props: ["vlrTotal", "totalUso"],
+  props: ["vlrTotal", "totalUso", "responsavel"],
 };
 </script>
 <style scoped>
 .footer {
   text-align: center;
-  background-color: rgb(50, 148, 204);
+  background-color: ForestGreen;
 }
 </style>

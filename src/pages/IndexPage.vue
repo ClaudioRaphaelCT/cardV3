@@ -1,6 +1,6 @@
 <template>
   <q-page class="home">
-    <img alt="Quasar logo" src="../assets/imgs/noix2.jpg" class="imagem-home" />
+    <img src="../assets/imgs/noix4.jpg" class="imagem-home" />
     <q-footer class="footer">
       Total: R${{ total.toFixed(2) }}
       <q-space />
@@ -48,7 +48,7 @@ export default defineComponent({
 .home {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 130vh;
   overflow: hidden;
 }
 
@@ -63,7 +63,7 @@ export default defineComponent({
 
 .footer {
   text-align: center;
-  background-color: rgb(98, 192, 247);
-  color: black;
+  background-color: ForestGreen;
+  color: whitesmoke;
 }
 </style>

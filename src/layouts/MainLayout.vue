@@ -1,6 +1,6 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header elevated class="bg-blue-5">
+    <q-header elevated class="header">
       <q-toolbar>
         <q-btn
           flat
@@ -96,3 +96,9 @@ export default defineComponent({
   },
 });
 </script>
+
+<style scoped>
+.header {
+  background-color: ForestGreen;
+}
+</style>

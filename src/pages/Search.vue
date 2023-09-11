@@ -99,7 +99,7 @@ export default {
   color: white;
 }
 #texto:hover {
-  background-color: rgb(37, 122, 233);
+  background-color: ForestGreen;
   color: whitesmoke;
 }
 </style>
