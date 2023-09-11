@@ -14,45 +14,11 @@
           @dblclick="capturar(user.id)"
         >
           <!-- DIALOG EDITAR -->
-          <q-dialog v-model="showDialogEditar">
-            <q-card>
-              <q-card-section>
-                <div class="text-h6 text-center">Editar</div>
-              </q-card-section>
-
-              <q-separator />
-              <!-- Campos do formulário -->
-              <q-select
-                outlined
-                color="teal-14"
-                v-model="itemEdit.name"
-                :options="responsaveis"
-                label="Responsavel"
-                class="inptResponsavel"
-              />
-              <q-input v-model="itemEdit.local" label="Local" />
-              <q-input
-                v-model="itemEdit.data"
-                label="Data"
-                class="inptData"
-                mask="##/##/####"
-              />
-              <q-input v-model.number="itemEdit.valor" label="Valor" />
-
-              <q-card-section style="max-height: 50vh" class="scroll">
-                <!-- Botão de salvar -->
-                <q-btn
-                  label="Salvar"
-                  icon="edit"
-                  color="green"
-                  v-close-popup
-                  @click="editar"
-                />
-              </q-card-section>
-
-              <q-separator />
-            </q-card>
-          </q-dialog>
+          <DialogEditar
+            v-model="showDialogEditar"
+            :id="idDoItemSelecionado"
+            :userName="nameAmbos"
+          ></DialogEditar>
           <!-- FIM DIALOG EDITAR -->
           <q-item-section avatar top>
             <q-avatar class="meu-avatar">
@@ -82,12 +48,14 @@
   </div>
 </template>
 <script>
+import DialogEditar from "src/components/DialogEditar.vue";
 import Title from "src/components/Title.vue";
 import Footer from "src/components/Footer.vue";
 import { MixinAmbos } from "src/utils/mixin-Ambos";
 export default {
   data() {
     return {
+      nameAmbos: "Ambos",
       cartaoAmbos: [],
       vlrAmbos: 0,
       totalUso: 0,
@@ -110,6 +78,7 @@ export default {
   },
   components: {
     Title,
+    DialogEditar,
     Footer,
   },
   mixins: [MixinAmbos],

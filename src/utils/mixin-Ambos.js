@@ -60,30 +60,5 @@ export const MixinAmbos = {
       this.idDoItemSelecionado = id;
       console.log(this.idDoItemSelecionado);
     },
-    async editar() {
-      // Chame o método para editar o item no Firestore
-      const itemRef = db
-        .collection("cartaoAmbos")
-        .doc(this.idDoItemSelecionado);
-
-      try {
-        await itemRef.update({
-          nome: this.itemEdit.name,
-          local: this.itemEdit.local,
-          data: this.itemEdit.data,
-          valor: this.itemEdit.valor,
-        });
-        // Feche o modal após salvar
-        this.showDialogEditar = false;
-        // Limpe os campos do formulário após a edição
-        this.novoLocal = "";
-        this.novaData = "";
-        this.novoValor = 0;
-        location.reload();
-        console.log("bateu aqui", this.idDoItemSelecionado);
-      } catch (error) {
-        console.error("Erro ao atualizar item:", error);
-      }
-    },
   },
 };
