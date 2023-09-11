@@ -57,7 +57,7 @@ export default {
       idDoItemSelecionado: null,
     };
   },
-  mixins: [ MixinEditar],
+  mixins: [MixinEditar],
   methods: {
     openDialog() {
       this.$emit("showDialogEditar");
@@ -68,7 +68,7 @@ export default {
 
 <style scoped>
 .dialogo {
-  width: 30%;
+  width: 40%;
 }
 .inptResponsavel {
   width: 100%;
@@ -78,6 +78,6 @@ export default {
   width: 100%;
 }
 .btnEditar {
-  margin-left: 30%;
+  margin-left: 38%;
 }
 </style>

@@ -63,6 +63,12 @@ const linksList = [
     link: "/#/ambos",
   },
   {
+    title: "Buscar",
+    caption: "Buscar utlização por data",
+    icon: "search",
+    link: "/#/buscar",
+  },
+  {
     title: "Voltar",
     caption: "Voltar para página principal",
     icon: "arrow_back_ios_new",
